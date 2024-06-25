@@ -9,7 +9,8 @@ Route::get('/', function () {
     return view('test');
 });
 
-Route::get('home',[Frontpages::class,'home'])->name('home');
+Route::get('home',[Frontpages::class,'home'])->middleware('verified')->name('home');
+
 Route::get('about',[Frontpages::class,'about'])->name('about');
 Route::get('classes',[Frontpages::class,'classes'])->name('classes');
 Route::get('contact',[Frontpages::class,'contact'])->name('contact');
@@ -21,3 +22,6 @@ Route::get('team',[Frontpages::class,'team'])->name('team');
 Route::get('testimonial',[Frontpages::class,'testimonial'])->name('testimonial');
 
 
+Auth::routes(['verify'=>true]);
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
