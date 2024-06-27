@@ -166,5 +166,8 @@ return [
         ],
 
     ],
-
+'dump' => [
+    'dump_binary_path' => 'C:/xampp/mysql/bin/', // Path to mysqldump executable
+    'timeout' => 60 * 5, // 5-minute timeout
+],
 ];
