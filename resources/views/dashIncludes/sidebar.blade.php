@@ -3,7 +3,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="admin/index.blade.php">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -203,14 +203,14 @@
       </li><!-- End Contact Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-register.html">
+        <a class="nav-link collapsed" href="auth/register.blade.php">
           <i class="bi bi-card-list"></i>
           <span>Register</span>
         </a>
       </li><!-- End Register Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-login.html">
+        <a class="nav-link collapsed" href="auth/login.blade.php">
           <i class="bi bi-box-arrow-in-right"></i>
           <span>Login</span>
         </a>

@@ -1,10 +1,20 @@
 
-
-
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Frontpages;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Auth\RegisterController;
+use Illuminate\Http\Request;
+
+// Define the admin route
+Route::get('/admin', [AdminController::class, 'index'])->name('index');
+
+// Define register routes as needed
+
+
+Route::get('/auth/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+
+
 Route::get('/', function () {
     return view('test');
 });
@@ -24,4 +34,20 @@ Route::get('testimonial',[Frontpages::class,'testimonial'])->name('testimonial')
 
 Auth::routes(['verify'=>true]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\Frontpages::class, 'index'])->middleware('verified')->name('home');
+
+
+
+
+Route::group(['prefix' => LaravelLocalization::setLocale()], function()
+{
+	/** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
+	Route::get('/', function()
+	{
+		return View::make('hello');
+	});
+
+	Route::get('test',function(){
+		return View::make('test');
+	});
+});

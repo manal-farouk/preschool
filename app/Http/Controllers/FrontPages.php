@@ -6,9 +6,6 @@ use Illuminate\Http\Request;
 
 class FrontPages extends Controller
 {
-
-
-
         public function home(){
             $title = "Home";
             return view ('home', compact('title'));

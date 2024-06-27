@@ -1,34 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    @include('includes.head')
-</head>
-
+@include('dashIncludes.head');
 <body>
 
   <!-- ======= Header ======= -->
-  @include('includes.header')
-  <!-- End Header -->
+  @include('dashIncludes.header');
+ <!-- End Header -->
 
   <!-- ======= Sidebar ======= -->
-  @include('includes.sidebar')
+  @include('dashIncludes.sidebar');
   <!-- End Sidebar-->
-
-  @include('includes.main')
+  @include('dashIncludes.main');
  <!-- End #main -->
- 
-@yield('header')
+
+ @yield('header')
 
   <!-- ======= Footer ======= -->
-  @include('includes.footer')
-<!-- End Footer -->
+  @include('dashIncludes.footer');
+ <!-- End Footer -->
+ @include('dashIncludes.footerJs');
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-
-  @include('includes.footerJs')
 </body>
 
 </html>
