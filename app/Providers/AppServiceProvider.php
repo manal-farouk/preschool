@@ -18,7 +18,12 @@ class AppServiceProvider extends ServiceProvider
      * Bootstrap any application services.
      */
     public function boot(): void
-    {
-        //
-    }
+
+{
+    Route::group(['prefix' => 'admin'], function () {
+        require base_path('routes/admin.php');
+    });
 }
+
+    }
+

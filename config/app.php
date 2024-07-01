@@ -103,6 +103,11 @@ return [
         ...array_filter(
             explode(',', env('APP_PREVIOUS_KEYS', ''))
         ),
+
+    ],
+    'providers' => [
+        // ... other providers
+        App\Providers\AdminRouteServiceProvider::class,
     ],
 
     /*

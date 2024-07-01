@@ -9,6 +9,14 @@ Route::get('/', function () {
 });
 
 
+
+//  route for an admin dashboard
+Route::get('/dashboard', function () {
+    return view('admin.dashboard');
+})->name('admin.dashboard');
+
+
+
 // Define the admin route
 Route::get('/admin', [AdminController::class, 'index'])->name('index');
 
